@@ -1,5 +1,7 @@
 
 import java.util.List;
+import java.util.*;
+
 
 /**
  * Lists are ordered collections. This means that we could access elements at a certain position of a list,
@@ -29,8 +31,12 @@ public class Lab {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(){
-        return null;
-    }
+
+        List<Integer> list1 = new ArrayList<Integer>();
+      
+           
+             return list1;
+             }
 
     /**
      * Get the size of a list.
@@ -38,8 +44,12 @@ public class Lab {
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
+
+    
     public int getSize(List<Integer> list){
-        return 0;
+
+            return list.size();
+     
     }
 
     /**
@@ -51,6 +61,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        list.add(value);
     }
 
     /**
@@ -65,8 +76,11 @@ public class Lab {
      * @param index represents the index of the element we would like to retrieve.
      * @return the int at the location in 'list' represented by 'index'.
      */
+    
     public int get(List<Integer> list, int index){
-        return 0;
+      
+      
+        return list.get(index);
     }
 
     /**
@@ -79,7 +93,10 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-
+        
+        
+       list.remove(list.get(position));
+        
     }
 
     /**
@@ -92,5 +109,6 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        list.set(position , value);
     }
 }
